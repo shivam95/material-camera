@@ -249,7 +249,7 @@ public class CameraFragment extends BaseCameraFragment implements View.OnClickLi
     }
 
     private boolean prepareMediaRecorder() {
-        return prepareMediaRecorder(CamcorderProfile.QUALITY_480P);
+        return prepareMediaRecorder(CamcorderProfile.QUALITY_QVGA);
     }
 
     private boolean prepareMediaRecorder(int forceQuality) {
