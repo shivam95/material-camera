@@ -288,13 +288,15 @@ public class CameraFragment extends BaseCameraFragment implements View.OnClickLi
                 throwError(new Exception("Failed to re-lock camera: " + e.getMessage(), e));
                 return false;
             }
-            if (forceQuality == CamcorderProfile.QUALITY_480P)
-                return prepareMediaRecorder(CamcorderProfile.QUALITY_720P);
-            else if (forceQuality == CamcorderProfile.QUALITY_720P)
+//            if (forceQuality == CamcorderProfile.QUALITY_480P)
+//                return prepareMediaRecorder(CamcorderProfile.QUALITY_720P);
+//            else if (forceQuality == CamcorderProfile.QUALITY_720P)
+//                return prepareMediaRecorder(CamcorderProfile.QUALITY_LOW);
+//            else if (forceQuality == CamcorderProfile.QUALITY_LOW) {
+//                return prepareMediaRecorder(CamcorderProfile.QUALITY_1080P);
+//            }
+            if(forceQuality == CamcorderProfile.QUALITY_QVGA)
                 return prepareMediaRecorder(CamcorderProfile.QUALITY_LOW);
-            else if (forceQuality == CamcorderProfile.QUALITY_LOW) {
-                return prepareMediaRecorder(CamcorderProfile.QUALITY_1080P);
-            }
             throwError(new Exception("Failed to begin recording: " + t.getMessage(), t));
             return false;
         }
